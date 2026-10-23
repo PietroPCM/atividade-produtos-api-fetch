@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Página de produtos carregados dinamicamente da API DummyJSON.">
+    <title>Catálogo de produtos</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <span class="eyebrow">EXERCÍCIO DE FETCH</span>
+        <h1>Catálogo de produtos</h1>
+        <p>Explore os primeiros 12 produtos disponibilizados pela API DummyJSON.</p>
+        <div class="action-row">
+          <button type="button" id="load-button">Carregar produtos <span aria-hidden="true">↗</span></button>
+          <span class="source">Dados: <a href="https://dummyjson.com/docs/products" target="_blank" rel="noopener noreferrer">DummyJSON</a></span>
+        </div>
+      </header>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">SELEÇÃO</span>
+            <h2 id="catalog-title">Produtos</h2>
+          </div>
+          <span id="count" class="count" hidden></span>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">Clique em “Carregar produtos” para começar.</p>
+        <div id="products" class="products" aria-live="off"></div>
+      </section>
+    </main>
+  </body>
+</html>
